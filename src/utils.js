@@ -4,12 +4,12 @@ var OPS = require('qtum-opcodes')
 var Buffer = require('safe-buffer').Buffer
 
 /**
- * This is a function for selecting QTUM utxos to build transactions
- * the transaction object takes at least 3 fields, value(unit is 1e-8 QTUM) , confirmations and isStake
+ * This is a function for selecting MRX utxos to build transactions
+ * the transaction object takes at least 3 fields, value(unit is 1e-8 MRX) , confirmations and isStake
  *
  * @param [transaction] unspentTransactions
- * @param Number amount(unit: QTUM)
- * @param Number fee(unit: QTUM)
+ * @param Number amount(unit: MRX)
+ * @param Number fee(unit: MRX)
  * @returns [transaction]
  */
 function selectTxs(unspentTransactions, amount, fee) {
@@ -38,19 +38,19 @@ function selectTxs(unspentTransactions, amount, fee) {
         if (findTotal.greaterThanOrEqualTo(value)) break
     }
     if (value.greaterThan(findTotal)) {
-        throw new Error('You do not have enough QTUM to send')
+        throw new Error('You do not have enough MRX to send')
     }
     return find
 }
 
 /**
  * This is a helper function to build a pubkeyhash transaction
- * the transaction object takes at least 5 fields, value(unit is 1e-8 QTUM), confirmations, isStake, hash and pos
+ * the transaction object takes at least 5 fields, value(unit is 1e-8 MRX), confirmations, isStake, hash and pos
  *
  * @param bitcoinjs-lib.KeyPair keyPair
  * @param String to
- * @param Number amount(unit: QTUM)
- * @param Number fee(unit: QTUM)
+ * @param Number amount(unit: MRX)
+ * @param Number fee(unit: MRX)
  * @param [transaction] utxoList
  * @returns String the built tx
  */
@@ -77,13 +77,13 @@ function buildPubKeyHashTransaction(keyPair, to, amount, fee, utxoList) {
 
 /**
  * This is a helper function to build a create-contract transaction
- * the transaction object takes at least 5 fields, value(unit is 1e-8 QTUM), confirmations, isStake, hash and pos
+ * the transaction object takes at least 5 fields, value(unit is 1e-8 MRX), confirmations, isStake, hash and pos
  *
  * @param bitcoinjs-lib.KeyPair keyPair
  * @param String code The contract byte code
  * @param Number gasLimit
- * @param Number gasPrice(unit: 1e-8 QTUM/gas)
- * @param Number fee(unit: QTUM)
+ * @param Number gasPrice(unit: 1e-8 MRX/gas)
+ * @param Number fee(unit: MRX)
  * @param [transaction] utxoList
  * @returns String the built tx
  */
@@ -118,14 +118,14 @@ function buildCreateContractTransaction(keyPair, code, gasLimit, gasPrice, fee, 
 
 /**
  * This is a helper function to build a send-to-contract transaction
- * the transaction object takes at least 5 fields, value(unit is 1e-8 QTUM), confirmations, isStake, hash and pos
+ * the transaction object takes at least 5 fields, value(unit is 1e-8 MRX), confirmations, isStake, hash and pos
  *
  * @param bitcoinjs-lib.KeyPair keyPair
  * @param String contractAddress The contract address
  * @param String encodedData The encoded abi data
  * @param Number gasLimit
- * @param Number gasPrice(unit: 1e-8 QTUM/gas)
- * @param Number fee(unit: QTUM)
+ * @param Number gasPrice(unit: 1e-8 MRX/gas)
+ * @param Number fee(unit: MRX)
  * @param [transaction] utxoList
  * @returns String the built tx
  */

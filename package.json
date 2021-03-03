@@ -1,24 +1,24 @@
 {
-  "name": "qtumjs-lib",
+  "name": "metrixjs-lib",
   "version": "0.0.8",
-  "description": "An extend lib for bitcoinjs-lib, it supports two new network of qtum and qtum-testnet, and it can generate contract creating and sending transactions",
+  "description": "An extend lib for bitcoinjs-lib, it supports two new network of metrix and metrix-testnet, and it can generate contract creating and sending transactions",
   "main": "src/index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/qtumproject/qtumjs-lib.git"
+    "url": "git+https://github.com/TheLindaProjectInc/metrixjs-lib.git"
   },
   "keywords": [
-    "qtum",
-    "qtumjs",
+    "metrix",
+    "metrixjs",
     "smart contract",
     "bitcoin"
   ],
-  "author": "Qtum Weiyu",
+  "author": "Metrixcoin",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/qtumproject/qtumjs-lib/issues"
+    "url": "https://github.com/TheLindaProjectInc/metrixjs-lib/issues"
   },
-  "homepage": "https://github.com/qtumproject/qtumjs-lib#readme",
+  "homepage": "https://github.com/TheLindaProjectInc/metrixjs-lib#readme",
   "devDependencies": {},
   "dependencies": {
     "bignumber.js": "^4.1.0",

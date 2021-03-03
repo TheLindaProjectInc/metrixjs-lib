@@ -1,7 +1,7 @@
-var qtumjs = require('bitcoinjs-lib')
+var metrixjs = require('bitcoinjs-lib')
 
-Object.assign(qtumjs.networks, require('./networks'))
+Object.assign(metrixjs.networks, require('./networks'))
 
-qtumjs.utils = require('./utils')
+metrixjs.utils = require('./utils')
 
-module.exports = qtumjs
+module.exports = metrixjs
