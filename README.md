@@ -19,7 +19,7 @@ var metrixjs = require('metrixjs-lib')
 ```
 {
     metrix: {
-        messagePrefix: '\x18Metrix Signed Message:\n',
+        messagePrefix: '\x17Metrix Signed Message:\n',
         bech32: 'mc',
         bip32: {
             public: 0x0488b21e,
@@ -30,7 +30,7 @@ var metrixjs = require('metrixjs-lib')
         wif: 0x80
     },
     metrix_testnet: {
-        messagePrefix: '\x18Metrix Signed Message:\n',
+        messagePrefix: '\x17Metrix Signed Message:\n',
         bech32: 'tm',
         bip32: {
             public: 0x043587cf,

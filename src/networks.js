@@ -1,6 +1,6 @@
 module.exports = {
     metrix: {
-        messagePrefix: '\x15Metrix Signed Message:\n',
+        messagePrefix: '\x17Metrix Signed Message:\n',
         bech32: 'mc',
         bip32: {
             public: 0x0488b21e,
@@ -11,7 +11,7 @@ module.exports = {
         wif: 0x99
     },
     metrix_testnet: {
-        messagePrefix: '\x15Metrix Signed Message:\n',
+        messagePrefix: '\x17Metrix Signed Message:\n',
         bech32: 'tm',
         bip32: {
             public: 0x043587cf,
